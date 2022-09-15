@@ -55,6 +55,8 @@ export type {
   APIRequestContext,
 } from 'playwright-chromium';
 
+export * as playwright from 'playwright-chromium';
+
 /**
  * Export the types necessary to write custom reporters
  */

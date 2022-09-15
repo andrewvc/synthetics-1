@@ -24,7 +24,7 @@
  */
 
 import fs from 'fs';
-import { run, journey } from '../src/index';
+import { run, journey, playwright } from '../src/index';
 import { generateTempPath } from '../src/helpers';
 
 describe('Run', () => {
@@ -51,5 +51,11 @@ describe('Run', () => {
       { j1: { status: 'succeeded' }, j2: { status: 'succeeded' } },
       {},
     ]);
+  });
+});
+
+describe('playwright export', () => {
+  it('should export playwright module devices', () => {
+    expect(playwright.devices['Desktop Chrome']).toBeTruthy();
   });
 });
